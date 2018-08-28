@@ -673,29 +673,21 @@ pre code {
     margin-left: auto
 }
 
-@media (min-width:576px) {
+  @media (min-width: 768px) {
     .container {
-        max-width: 540px
+      width: 750px;
     }
-}
-
-@media (min-width:768px) {
+  }
+  @media (min-width: 992px) {
     .container {
-        max-width: 720px
+      width: 970px;
     }
-}
-
-@media (min-width:992px) {
+  }
+  @media (min-width: 1200px) {
     .container {
-        max-width: 960px
+      width: 1470px;
     }
-}
-
-@media (min-width:1200px) {
-    .container {
-        max-width: 1140px
-    }
-}
+  }
 
 .container-fluid {
     width: 100%;
