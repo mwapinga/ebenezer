@@ -28,10 +28,13 @@
                     <!-- Favicon -->
                     <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
                     <!-- Web Font -->
-                    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
             
                     <!-- Bootstrap CSS -->
-                    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+                   {{--  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"> --}}
                     <!-- Font Awesome CSS -->
                     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
                     <!-- Fancy Box CSS -->
@@ -53,7 +56,20 @@
                     
                     <!-- Learedu Color -->
                     <link rel="stylesheet" href="{{ asset('css/color/color1.css') }}">
-                    <link rel="stylesheet" href="#" id="colors">    
+                    <link rel="stylesheet" href="#" id="colors"> 
+                    {{-- this is for navbar only    --}}
+                    <link rel="stylesheet" href="{{ asset('assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css') }}">
+                    <link rel="stylesheet" href="{{ asset('assets/web/assets/mobirise-icons/mobirise-icons.css') }}">
+                    <link rel="stylesheet" href="{{ asset('assets/tether/tether.min.css') }}">
+                    <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap.min.css') }}">
+                    <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap-grid.min.css') }}">
+                    <link rel="stylesheet" href="{{ asset('assets/bootstrap/css/bootstrap-reboot.min.css') }}">
+                    <link rel="stylesheet" href="{{ asset('assets/socicon/css/styles.css') }}">
+                    <link rel="stylesheet" href="{{ asset('assets/animatecss/animate.min.css') }}">
+                    <link rel="stylesheet" href="{{ asset('assets/dropdown/css/style.css') }}">
+                    <link rel="stylesheet" href="{{ asset('assets/theme/css/style.css') }}">
+                    <link rel="stylesheet" href="{{ asset('assets/mobirise/css/mbr-additional.css') }}" type="text/css">
+                    {{-- here its over --}}
                 </head>
                 <body>
                 
@@ -73,72 +89,83 @@
                         <div class="topbar">
                             <div class="container">
                                 <div class="row">
-                                </div>
-                            </div>
-                        </div>
+                       </div>
+                   </div>
+               </div>
+
                         <!-- End Topbar -->
                         <!-- Header Inner -->
-                        <div class="header-inner">
+                    
+    <section class="menu cid-qTkzRZLJNu" once="menu" id="menu1-0">
+    <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </button>
+        <div class="menu-logo">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="{{ url('/') }}">
+                         <img src="assets/images/logo2.png" alt="Mobirise" style="height: 3.8rem;">
+                    </a>
+                </span>
+                <span class="navbar-caption-wrap">
+                    <a class="navbar-caption text-white display-4" href=" {{ url('/') }}">
+                        <h2>EBENEZER SEMINARY</h2>
+                    </a>
+                </span>
+            </div>
+        </div>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                <li class="nav-item"><a class="nav-link link text-white display-7" href="#"></a></li>
+                <li class="nav-item"><a class="nav-link link text-white display-7" href="{{ url('/') }}"><span class="mbrib-home mbr-iconfont mbr-iconfont-btn"></span>Home</a></li>
+                <li class="nav-item"><a class="nav-link link text-white display-7" href="{{ url('contact') }}"><span class="mbri-arrow-next mbr-iconfont mbr-iconfont-btn"></span>Admission</a></li>
+                <li class="nav-item"><a class="nav-link link text-white display-7" href="{{ url('contact') }}"><span class="mbri-arrow-next mbr-iconfont mbr-iconfont-btn"></span>Our School</a></li>
+                <li class="nav-item"><a class="nav-link link text-white display-7" href="{{ url('About') }}"><span class="mbri-arrow-next mbr-iconfont mbr-iconfont-btn"></span> About Us</a></li>
+                <li class="nav-item"><a class="nav-link link text-white display-7" href="{{ url('contact') }}"><span class="mbri-arrow-next mbr-iconfont mbr-iconfont-btn"></span>Contact us&nbsp;</a></li>
+            </ul>
+            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="{{ url('apply') }}">
+                <span class="socicon socicon-telegram mbr-iconfont mbr-iconfont-btn" style="color: rgb(0, 177, 106);"></span>Apply Now</a></div>
+            </div>
+    </nav>
+</section><br >
+                       <div class="header-inner">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-50">
-
-                                        <div class="mobile-menu"></div>
-                                    </div>
-                                    <div class="container">
-                                        <!-- Header Widget -->
-                                        <div class="logo">
-                                                <a href="{{ url('/') }}"><img src="{{ asset('images/inasumbua.png') }}" alt="#"></a>
-                                            </div>
-                                        <div class="header-widget">
-                                            <div class="single-widget">
-                                                <i class="fa fa-phone"></i>
-                                                <h4>Call Now<span>(+255) 654 418 999</span></h4>
-                                            </div>
-                                            <div class="single-widget">
-                                                <i class="fa fa-envelope-o"></i>
-                                                <h4>Send Message<a href="mailto:mailus@mail.com"><span>admin@EbenezerSeminary.com</span></a></h4>
-                                            </div>
-                                            <div class="single-widget">
-                                                <i class="fa fa-map-marker"></i>
-                                                <h4>Our Location<span>P.O. Box 2080 Iringa, Nduli Near Iringa Airport </span></h4>
-                                            </div>
-                                        </div>
-                                        <!--/ End Header Widget -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/ End Header Inner -->
-                        <!-- Header Menu -->
-                        <div class="header-menu">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <nav class="navbar navbar-default">
-                                            <div class="navbar-collapse">
-                                                <!-- Main Menu -->
-                                                <ul id="nav" class="nav menu navbar-nav">
-                                                    <li ><a href="{{ url('/') }}">Home</a></li>
-                                                    <li ><a href="{{ url('About') }}">About Us</a></li>
-                                                    <li><a href="{{ url('contact') }}">Contact Us</a></li>
-                                                    <li><a href="{{ url('contact') }}">Admission</a></li>
-                                                </ul>
-                                                <!-- End Main Menu -->
-                                                <!-- button -->
-                                                <div class="button">
-                                                   <a href="{{ url('apply') }}" class="btn"><i class="fa fa-pencil"></i>Apply Now</a>
+                                                        <div class="col-lg-5 col-md-5 col-50">
+                                                            <div class="mobile-menu"></div>
+                                                        </div>
+                                            <div class="container">
+                                                <!-- Header Widget -->
+                                                <div class="header-widget">
+                                                    <div class="single-widget">
+                                                        <i class="fa fa-phone"></i>
+                                                        <h4>Call Now<span>(+255) 654 418 999</span></h4>
+                                                    </div>
+                                                    <div class="single-widget">
+                                                        <i class="fa fa-envelope-o"></i>
+                                                        <h4>Send Message<a href="mailto:mailus@mail.com"><span>admin@EbenezerSeminary.com</span></a></h4>
+                                                    </div>
+                                                    <div class="single-widget">
+                                                        <i class="fa fa-map-marker"></i>
+                                                        <h4>Our Location<span>P.O. Box 2080 Iringa, Nduli Near Iringa Airport </span></h4>
+                                                    </div>
                                                 </div>
-                                                <!--/ End Button -->
-                                            </div> 
-                                        </nav>
-                                    </div>
+                                                <!--/ End Header Widget -->
+                                            </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--/ End Header Menu -->
-                    </header>
-                    <!-- End Header -->
+                           </div>
+</header>
+
+
+
+
             @yield('content')
         </main>
     </div>
@@ -242,8 +269,17 @@
                         <!--/ End Footer Bottom -->
                     </footer>
               
-                    
-                   
+                           {{-- nab bar --}}
+                     <script src="{{ asset('assets/popper/popper.min.js') }}"></script>
+                      <script src="{{ asset('assets/tether/tether.min.js') }}"></script>
+                      <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
+                      <script src="{{ asset('assets/touchswipe/jquery.touch-swipe.min.js') }}"></script>
+                      <script src="{{ asset('assets/viewportchecker/jquery.viewportchecker.js') }}"></script>
+                      <script src="{{ asset('assets/smoothscroll/smooth-scroll.js') }}"></script>
+                      <script src="{{ asset('assets/dropdown/js/script.min.js') }}"></script>
+                      <script src="{{ asset('assets/theme/js/script.js') }}"></script>
+
+                         {{-- end nav bar script --}}
                     <script src="{{ asset('js/jquery.min.js') }}"></script>
                     <script src="{{ asset('js/jquery-migrate.min.js') }}"></script>
                
@@ -279,7 +315,6 @@
                 
                     <script src="{{ asset('js/jquery.scrollUp.min.js') }}"></script>
                     
-                    <script src="http://maps.google.com/maps/api/js?key=AIzaSyC0RqLa90WDfoJedoE3Z_Gy7a7o8PCL2jw"></script>
                     <script src="{{ asset('js/gmaps.min.js') }}"></script>
                   
                     <script src="{{ asset('js/main.js') }}"></script>

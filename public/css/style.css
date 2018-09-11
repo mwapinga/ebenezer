@@ -238,24 +238,25 @@ Version:	1.0
 .header .nav li .dropdown li .dropdown.submenu li:hover a{
 	color:#fff;
 }
-.header .button {
+header. button {
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: 56000px;
+	right: 26000px;
 }
-.header .button .btn {
+header. button .btn {
 	margin-top: 8px;
-	color: #fff;
+	color: rgb(241, 247, 242);
 	border-radius: 50px;
+	background-color:#0f850d;
 	box-shadow:none;
-	border:1px solid transparent;
+	border:2px solid transparent;
 }
-.header .button .btn:hover{
-	color:#252525;
-	background:transparent;
-	border-color:#e6e6e6;
+header. button .btn:hover{
+	color:#38cba9;
+	background-color:#f1f7f1;
+	border-color:#0aee56;
 }
-.header .button .btn i{
+header. button .btn {
 	margin-right:5px;
 }
 /* Header Sticky */

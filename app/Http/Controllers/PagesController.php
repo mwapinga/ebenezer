@@ -7,6 +7,7 @@ use App\slider;
 use App\staffs;
 use App\labaratory;
 use App\Blog;
+use App\Facts;
 
 use Illuminate\Http\Request;
 
@@ -23,9 +24,10 @@ class PagesController extends Controller
         $stafs = staffs::all();
         $lab = labaratory::all();
         $news = Blog::all();
+        $fact = Facts::all();
 
 
-         return view('pages.index',compact('bestdents','event','test','lab','stafs','slider','news') );
+         return view('pages.index',compact('bestdents','event','test','lab','stafs','slider','news','fact') );
     }
 
     public function create()

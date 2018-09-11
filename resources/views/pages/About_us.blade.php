@@ -23,16 +23,20 @@
           <div class="container">
               <div class="row">
                   <div class="col-lg-6 col-12">
-                      <div class="single-image overlay">
-                          <img src="images/about.jpg" alt="#">
-                          <a href="https://www.youtube.com/watch?v=UalTfOIDQ7M" class="btn video-popup mfp-fade"><i class="fa fa-play"></i></a>
+                      <div class="#">
+                        <div class="mapouter"><div class="gmap_canvas">
+                        <iframe width="700" height="600" id="gmap_canvas" src="https://maps.google.com/maps?q=Iringa%20Ebenezer%20Seminary&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                        </iframe><a href="https://www.pureblack.de">webdesign agenturen</a>
+                        </div><style>.mapouter{text-align:right;height:600px;width:700px;}.gmap_canvas {overflow:hidden;background:none!important;height:600px;width:700px;}
+                        </style></div>
                       </div>
                   </div>
                   <div class="col-lg-6 col-12">
                       <div class="about-text">
-                          <h2>About Our Education</h2>
-                          <p>As marketing professionals in the experiential world, we have become accusto to the idea of an ever evolving industry. Brands today are moving away from purely face to face physical experiences, and bringing their essence to life, not only through digital immersion creativity but through new technology as well including Virtual Reality.</p>
-                          <p>face physical experiences, and bringing their essence to life, not only through digital immersion creativity but through new technology as well including Virtual Reality As marketing professionals in the experiential world, we have become accusto to the idea of an ever evolving industry. Brands today are moving away from purely face to face physical experiences,</p>
+                          <h2>About Our Ebenezer</h2>
+                          <p>Established in 2007, Ebenezer Seminary is an innovative, religious secondary school with a mission to ignite a passion for learning and to inspire our students to become self-motivated, enthusiastic participants in their education. </p>
+                          <p>We honor the uniqueness of each individual and seek students from diverse backgrounds in order to build a strong, inclusive community and prepare students for lives in a multicultural society. Ebenezer Seminary has been at the forefront 
+                            of educational excellence since our founding, pioneering innovations such as block scheduling, a nationally regarded service learning program </p>
                           <div class="button">
                               <a href="#" class="btn">Our Courses</a>
                           </div>
@@ -105,7 +109,7 @@
                             @foreach($stafs as $staf)
                             <div class="col-lg-3 col-md-6 col-12">
                                 <div class="single-team">
-                                   <img src="{{ URL::asset('images/'.$staf->photo->photo_tag) }}" alt="">
+                                   <img src="{{ URL::asset('images/'.$staf->photo->photo_tag.'.jpg') }}" alt="">
                                     <div class="team-hover">
                                         <h4>{{ $staf->name }} {{ $staf->surname }}<span>{{ $staf->post }}</span></h4>  
                                     </div>

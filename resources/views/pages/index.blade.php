@@ -10,7 +10,7 @@
                       <div class="slider-active">
                           <!-- starrt loop  Slider -->
                           @foreach($slider as $slide )
-                          <div class="single-slider overlay" style="background-image:url('{{ URL::asset('images/'.$slide->photo->photo_tag)  }}')">
+                          <div class="single-slider overlay" style="background-image:url('{{ URL::asset('images/'.$slide->photo->photo_tag.'.jpg')  }}')">
                               <div class="container">
                                   <div class="row">
                                       <div class="col-lg-8 col-md-8 col-12">
@@ -20,7 +20,7 @@
                                           @endphp  --}}
                                           <div class= "slider-text text-center">
 
-                                       <h1>{{ $slide->tags1 }}<span> {{ $slide->tags2 }} </span> {{ $slide->tags3 }}</h1>
+                                       <h1> -  {{ $slide->tags1 }}<span> {{ $slide->tags2 }} </span> {{ $slide->tags3 }}  - </h1>
                                        <p> {{ $slide->details }}</p>
                                               <div class="button">
                                                   <a href="{{url('About')}}" class="btn primary">About Ebenezer</a>
@@ -52,8 +52,8 @@
                                   @foreach($lab as $labs)
                                   <div class="single-event">
                                       <div class="head overlay">
-                              <img src="{{ URL::asset('images/'.$labs->photo->photo_tag) }}" alt="">
-                                          <a href="{{ URL::asset('images/'.$labs->photo->photo_tag)  }}" data-fancybox="photo" class="btn"></a>
+                              <img src="{{ URL::asset('images/'.$labs->photo->photo_tag.'.jpg') }}" alt="">
+                                          <a href="{{ URL::asset('images/'.$labs->photo->photo_tag.'.jpg')  }}" data-fancybox="photo" class="btn"></a>
                                       </div>
                                       <div class="event-content">
                                           <div class="title">
@@ -167,7 +167,7 @@
                                  @foreach ($bestdents as $dent )
                                       <div class="single-course">
                                           <div class="course-head overlay">
-                                       <img src="{{ URL::asset('images/'.$dent->photo->photo_tag) }}" alt="">
+                                       <img src="{{ URL::asset('images/'.$dent->photo->photo_tag.'.jpg') }}" alt="">
     {{--   <img src="{{ $dent->photo?$dent->photo->photo_tag:'http://placehold.it/400X400' }}" alt="">  --}}                                            </div>
                                           <div class="single-content">
                                               <h4>  <a href="#best"><span> {{ $dent->name }}  {{  $dent->surname }}</span></a></h4>
@@ -209,7 +209,7 @@
                               @foreach($stafs as $staf)
                               <div class="col-lg-3 col-md-6 col-12">
                                   <div class="single-team">
-                                     <img src="{{ URL::asset('images/'.$staf->photo->photo_tag) }}" alt="">
+                                     <img src="{{ URL::asset('images/'.$staf->photo->photo_tag.'.jpg') }}" alt="">
                                       <div class="team-hover">
                                           <h4>{{ $staf->name }} {{ $staf->surname }}<span>{{ $staf->post }}</span></h4>  
                                       </div>
@@ -240,7 +240,7 @@
                                       <!-- start loop Testimonial -->
                                       @foreach($test as $tests)
                                       <div class="single-testimonial">
-                                          <img src="{{ URL::asset('images/'.$tests->photo->photo_tag) }}" alt="">
+                                          <img src="{{ URL::asset('images/'.$tests->photo->photo_tag.'.jpg') }}" alt="">
                                           <div class="main-content">
                                               <h4 class="name"> {{ $tests->name }} {{ $tests->name }}   </h4>
                                               <p> {{ $tests->Testimonial }}</p>
@@ -277,8 +277,8 @@
                                       @foreach($event as $events)
                                       <div class="single-event">
                                           <div class="head overlay">
-                                              <img src="{{ URL::asset('images/'.$events->photo->photo_tag) }}" alt="">
-                                              <a href="{{ URL::asset('images/'.$events->photo->photo_tag) }}" data-fancybox="photo" class="btn"><i ></i></a>
+                                              <img src="{{ URL::asset('images/'.$events->photo->photo_tag.'.jpg') }}" alt="">
+                                              <a href="{{ URL::asset('images/'.$events->photo->photo_tag.'.jpg') }}" data-fancybox="photo" class="btn"><i ></i></a>
                                           </div>
                                           <div class="event-content">
                                               <div class="meta"> 
@@ -302,51 +302,29 @@
                   @endif
                   <!--event its over-->
 
-                      <!-- start mission vision values -->
-                                      <div class="fun-facts overlay" data-stellar-background-ratio="0.5">
+        <!-- start mission vision values -->
+                 @if ($fact)
+                 <div class="fun-facts overlay" data-stellar-background-ratio="0.5">
                       <div class="container">
                           <div class="row">
+                              @foreach ($fact as $facts)
+                                  
+                           
                               <div class="col-lg-4 col-md-7 col-7">
                                   <!-- Single Fact -->
                                   <div class="single-fact">
                                       <span><i class="fa fa-paper-plane"></i></span>
-                                      <div class="number"><span>OUR MISSION</span></div>
-                                      <p>Ebenezer Seminary seeks to ignite a passion 
-                                           for learning, inspiring its students
-                                           to become self-motivated, enthusiastic 
-                                           participants in their education.</p>
+                                      <div class="number"><span> {{ $facts->name}} </span></div>
+                                      <p>{{$facts->detail}} </p>
                                   </div>
                                   <!--/ End Single Fact -->
-                              </div>
-                              <div class="col-lg-4 col-md-7 col-7">
-                                  <!-- Single Fact -->
-                                  <div class="single-fact">
-                                      <i class="fa fa-eye"></i>
-                                      <div class="number"><span>OUR VISSION</span></div>
-                                      <p>Ebenezer Seminary prepares students to 
-                                          understand, contribute to, and succeed 
-                                          in a rapidly changing society, thus making
-                                           the world a better and more just place.</p>
-                                  </div>
-                                  <!--/ End Single Fact -->
-                              </div>
-                               
-                              <div class="col-lg-4 col-md-7 col-7">
-                                  <!-- Single Fact -->
-                                  <div class="single-fact">
-                                      <i class="fa fa-diamond"></i>
-                                      <div class="number"><span>OUR VALUES</span></div>
-                                      <p>Learning is an active, joyful process of discovery
-                                          where students are challenged to ask essential 
-                                            questions, solve problems in disciplined
-                                                  and creative ways</p>
-                                  </div>
-                                  <!--/ End Single Fact -->
-                              </div>
+                              </div> 
+                              @endforeach   
                           </div>
                       </div>
                   </div> 
-                  <!-- end mission vision values -->
+                 @endif
+        <!-- end mission vision values -->
 
 
                  
@@ -371,7 +349,7 @@
                                   <!-- <div class="date">
                                       <p><span></span><p/>
                                   </div> -->
-                                  <img src="{{ URL::asset('images/'.$new->photo->photo_tag) }}" alt="#">
+                                  <img src="{{ URL::asset('images/'.$new->photo->photo_tag.'.jpg') }}" alt="#">
                               </div>
                               <div class="blog-content">
                                   <h4 class="blog-title"><a href="blog-single.html">{{$new->header}}</a></h4>
