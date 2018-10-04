@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\staffs;
+use App\about;
+use App\Facts;
 
 class AboutController extends Controller
 {
@@ -13,9 +15,12 @@ class AboutController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   
+    {    $abt = about::all();
          $stafs = staffs::all();
-        return view('pages.About_us', compact('stafs'));
+         $fact = Facts::all();
+         return view('publics.About_us', compact('stafs','abt','fact'));
+
+         $photo = photo::all();
     }
 
     /**
@@ -25,7 +30,7 @@ class AboutController extends Controller
      */
     public function create()
     {
-        //
+        return view('admins.About.create');
     }
 
     /**
@@ -47,7 +52,7 @@ class AboutController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**

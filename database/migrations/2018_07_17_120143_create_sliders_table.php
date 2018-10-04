@@ -17,9 +17,10 @@ class CreateSlidersTable extends Migration
             $table->increments('id');
             $table->string('tags1');
             $table->string('tags2');
-            $table->string('tags3');
-            $table->string('details');
+            $table->string('tags3')->nullable();
+            $table->string('details')->nullable();
             $table->integer('photo_id');
+            $table->integer('status');
             $table->timestamps();
         });
     }

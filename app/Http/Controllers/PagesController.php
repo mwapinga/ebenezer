@@ -8,6 +8,10 @@ use App\staffs;
 use App\labaratory;
 use App\Blog;
 use App\Facts;
+use App\subscriber;
+use App\Http\Requests\homepagereq;
+// use Illuminate\Http\Request;
+// use Illuminate\Support\Facades\Session;
 
 use Illuminate\Http\Request;
 
@@ -27,7 +31,7 @@ class PagesController extends Controller
         $fact = Facts::all();
 
 
-         return view('pages.index',compact('bestdents','event','test','lab','stafs','slider','news','fact') );
+         return view('publics.index',compact('bestdents','event','test','lab','stafs','slider','news','fact') );
     }
 
     public function create()
@@ -42,10 +46,12 @@ class PagesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(UsersRequest $request)
+    public function store(homepagereq $request)
     {
-       
-
+                $data = $request->all();
+                subscriber::create($data);
+                return redirect('/#sub')->with('success', 'Thanks for Your Subscription');
+    
     }
 
     /**
@@ -56,7 +62,7 @@ class PagesController extends Controller
      */
     public function show($id)
     {
-        //
+       
     }
 
     /**

@@ -16,7 +16,9 @@ class CreateLabaratoriesTable extends Migration
         Schema::create('labaratories', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->tinyint('status');
             $table->integer('photo_id');
+
             $table->timestamps();
         });
     }

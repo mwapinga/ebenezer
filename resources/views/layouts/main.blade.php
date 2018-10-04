@@ -32,6 +32,7 @@
                     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
                     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+                    <script type="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
             
                     <!-- Bootstrap CSS -->
                    {{--  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"> --}}
@@ -110,7 +111,7 @@
             <div class="navbar-brand">
                 <span class="navbar-logo">
                     <a href="{{ url('/') }}">
-                         <img src="assets/images/logo2.png" alt="Mobirise" style="height: 3.8rem;">
+                         <img src="{{ asset('assets/images/logo2.png') }} " alt="" style="height: 3.8rem;">
                     </a>
                 </span>
                 <span class="navbar-caption-wrap">
@@ -133,7 +134,7 @@
                 <span class="socicon socicon-telegram mbr-iconfont mbr-iconfont-btn" style="color: rgb(0, 177, 106);"></span>Apply Now</a></div>
             </div>
     </nav>
-</section><br >
+</section><br ><br >
                        <div class="header-inner">
                             <div class="container">
                                 <div class="row">
@@ -278,6 +279,7 @@
                       <script src="{{ asset('assets/smoothscroll/smooth-scroll.js') }}"></script>
                       <script src="{{ asset('assets/dropdown/js/script.min.js') }}"></script>
                       <script src="{{ asset('assets/theme/js/script.js') }}"></script>
+
 
                          {{-- end nav bar script --}}
                     <script src="{{ asset('js/jquery.min.js') }}"></script>

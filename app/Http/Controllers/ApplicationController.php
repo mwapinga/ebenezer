@@ -13,7 +13,7 @@ class ApplicationController extends Controller
      */
     public function index()
     {
-        return view('pages.apply');
+        return view('publics.apply');
     }
 
     /**

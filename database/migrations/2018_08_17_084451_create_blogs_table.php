@@ -17,7 +17,7 @@ class CreateBlogsTable extends Migration
             $table->increments('id');
             $table->string('header');
             $table->string('Body',500);
-            $table->date('date')->default(Carbon::now());
+            $table->tinyint('status');
             $table->integer('user_id');
             $table->integer('photo_id');
             $table->timestamps();

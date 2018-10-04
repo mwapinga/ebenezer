@@ -18,6 +18,7 @@ class CreateEventsTable extends Migration
             $table->string('name');
             $table->date('date')->default(Carbon::now());
             $table->string('details');
+            $table->tinyint('status');
             $table->integer('photo_id');
             $table->timestamps();
         });

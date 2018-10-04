@@ -18,6 +18,7 @@ class CreateStaffsTable extends Migration
             $table->string('name');
             $table->string('surname');
             $table->string('post');
+            $table->tinyint('status')->default(0);
             $table->integer('photo_id');
             $table->timestamps();
         });

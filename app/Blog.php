@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Blog extends Model
 {
        protected $fillable = [
-          'header','Body','date','photo_id', 'Publisher'
+          'header','Body','status','user_id','photo_id',
        ];
-       protected $dates = [
-         'date'
-       ];
+       // protected $dates = [
+       //   'date'
+       // ];
 
       public function photo(){
         return $this->belongsTo('App\photo');

@@ -17,9 +17,10 @@ class CreateBeststudentsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('surname');
-            $table->integer('Reglvl');
-            $table->integer('Natlvl');
+            $table->integer('Reglvl')->nullable();
+            $table->integer('Natlvl')->nullable();
             $table->integer('year');
+            $table->tinyint('status');
             $table->integer('photo_id');
 
             $table->timestamps();

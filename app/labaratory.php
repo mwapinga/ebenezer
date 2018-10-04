@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class labaratory extends Model
 {
        protected $fillable = [
-        'name','photo_id',
+        'name','photo_id','status',
     ];
 
       public function photo(){

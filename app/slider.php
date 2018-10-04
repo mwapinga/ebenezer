@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class slider extends Model
 {
          protected $fillable = [
-        'tags1','tags2','tags3','details','photo_id',
+        'tags1','tags2','tags3','details','photo_id','status',
     ];
 
       public function photo(){

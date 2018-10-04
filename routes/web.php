@@ -11,10 +11,23 @@
 |
 */
 
-// Route::resource('/', 'Homecontroller');
 
 Route::resource('/', 'PagesController');
 Route::resource('/apply', 'ApplicationController');
 Route::resource('/contact', 'ContactController');
 Route::resource('/About', 'AboutController');
+
+
+
+                    //admin routes
+		Route::resource('/ebeadmin', 'adminfrontcontroller');
+		Route::resource('/slide', 'slidercontroller');
+		Route::resource('/blog', 'blogscontroller');
+		Route::resource('/event', 'EventsController');
+		Route::resource('/beststudent', 'beststudentController');
+		Route::resource('/testimonial', 'testimonialController');
+		Route::resource('/portfolio', 'portfolioController');
+		Route::resource('/staff', 'staffController');
+       Route::resource('/ababout', 'adaboutController');
+
 ?>
